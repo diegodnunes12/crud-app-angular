@@ -1,0 +1,27 @@
+<main>
+    <div class="container">
+        <h1>Produtos</h1>
+        <div class="row">
+            <div class="col-8">
+                <table class="table table-striped">
+                    <thead>
+                        <tr>
+                            <th scope="col">Código</th>
+                            <th scope="col">Nome</th>
+                            <th scope="col">Preço</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr *ngFor="let produto of produtos"> 
+                            <th>{{ produto.codigo }}</th>
+                            <td>{{ produto.nome }}</td>
+                            <td>{{ produto.preco }}</td>
+                        </tr>                    
+                    </tbody>
+                </table>
+            </div>
+            <div class="col-4">
+            </div>
+        </div>
+    </div>
+</main>
