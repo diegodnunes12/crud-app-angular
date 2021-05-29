@@ -1,1 +1,17 @@
-<p>detalhes works!</p>
+<h1>{{produto.nome}}</h1>
+<table class="table">
+    <tbody>
+        <tr> 
+            <td>Código:</td>
+            <td>{{ produto.codigo }}</td>
+        </tr>  
+        <tr> 
+            <td>Descrição:</td>
+            <td>{{ produto.descricao }}</td>
+        </tr> 
+        <tr> 
+            <td>Preço:</td>
+            <td>{{ produto.preco | currency}}</td>
+        </tr>                    
+    </tbody>
+</table>

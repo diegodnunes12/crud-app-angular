@@ -2,25 +2,28 @@
     <div class="container">
         <h1>Produtos</h1>
         <div class="row">
-            <div class="col-8">
+            <div class="col-6">
                 <table class="table table-striped">
                     <thead>
                         <tr>
-                            <th scope="col">Código</th>
                             <th scope="col">Nome</th>
                             <th scope="col">Preço</th>
+                            <th scope="col">Ações</th>
                         </tr>
                     </thead>
                     <tbody>
                         <tr *ngFor="let produto of produtos"> 
-                            <th>{{ produto.codigo }}</th>
                             <td>{{ produto.nome }}</td>
-                            <td>{{ produto.preco }}</td>
+                            <td>{{ produto.preco | currency }}</td>
+                            <td>
+                                <a routerLink="{{ produto.codigo }}">Detalhes</a>
+                            </td>
                         </tr>                    
                     </tbody>
                 </table>
             </div>
-            <div class="col-4">
+            <div class="col-6">
+                <router-outlet></router-outlet>
             </div>
         </div>
     </div>
